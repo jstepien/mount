@@ -1,6 +1,8 @@
 {:datomic 
  {:uri "datomic:mem://mount"}
 
+ :www {:port 0}  ;; Jetty will randomly assign the available port (this is good for dev reloadability)
+
  :h2
  {:classname "org.h2.Driver"
   :subprotocol "h2"

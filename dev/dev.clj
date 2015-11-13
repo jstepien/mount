@@ -13,8 +13,9 @@
             [clojure.test :as test]
             ;; [clojure.core.async :refer [>!! <!! >! <! go-loop alt! timeout]]
             [clojure.tools.namespace.repl :as tn]
-            [mount]
-            [app :refer [create-nyse-schema find-orders add-order]]))  ;; <<<< replace this your "app" namespace(s) you want to be available at REPL time
+            [app]                                    ;; <<<< replace this your "app" namespace(s) you want to be available at REPL time
+            [app.nyse :refer :all]
+            [mount]))
 
 (defn start []
   (mount/start))
